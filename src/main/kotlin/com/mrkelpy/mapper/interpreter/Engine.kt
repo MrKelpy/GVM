@@ -21,9 +21,7 @@ class Engine {
 
         val mappingsSource = this.getMappingsFile(cwd)
 
-
-
-
+        return listOf()
     }
 
     /**

@@ -1,5 +1,7 @@
 package com.mrkelpy.mapper
 
+import com.mrkelpy.mapper.interpreter.SyntaxHandler
+
 fun main() {
-    println("Hello World!")
+    SyntaxHandler("C:\\dev\\Kotlin\\GeneralValueMapper\\mappings.gvm").run()
 }

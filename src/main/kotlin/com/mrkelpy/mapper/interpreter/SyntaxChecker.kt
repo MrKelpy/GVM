@@ -1,6 +1,7 @@
 package com.mrkelpy.mapper.interpreter
 
-import java.io.BufferedReader
+import com.mrkelpy.mapper.utils.ReadingUtils.Companion.compact
+import com.mrkelpy.mapper.utils.ReadingUtils.Companion.noComments
 import java.io.File
 
 /**
@@ -15,6 +16,7 @@ class SyntaxHandler(private val filepath: String) {
      * The full syntax guide is present in the README.md file.
      */
     fun run() {
+        getAllStatements()
 
     }
 
@@ -24,13 +26,12 @@ class SyntaxHandler(private val filepath: String) {
      *
      * @return A list with all the statements in the mappings file
      */
-    fun getAllStatements() : List<String> {
+    private fun getAllStatements() : List<String> {
 
-        val reader = File(this.filepath).bufferedReader()
-        reader
+        val lines = File(this.filepath).bufferedReader().noComments().compact()
+        println(lines)
 
-
-
+        return listOf("")
     }
 
 

@@ -7,10 +7,36 @@ import java.io.BufferedReader
  */
 class ReadingUtils {
 
-    /**
-     * Go through every line and flatten it down to one line.
-     */
-    fun BufferedReader.flatten(reader: BufferedReader) : String {
+    companion object {
+
+        /**
+         * Remove all the break lines and double spaces in a given string, compacted to a flat and spaceless one-liner
+         *
+         * @return A string containing the entire file compacted down to one line
+         */
+        fun String.compact() : String {
+
+            var flattened = this.replace("\n", "")
+            flattened = flattened.replace(" ", "")
+            flattened = flattened.replace("\t", "")
+
+            return flattened.trim()
+        }
+
+        /**
+         * Removes all the comments in the given file, returning a string with the full text
+         *
+         * @return A string containing the text with no comments
+         */
+        fun BufferedReader.noComments() : String {
+
+            var result = ""
+
+            for (line in this.readLines())
+                result += line.split("//")[0] + "\n"
+
+            return result.trim()
+        }
 
 
 
