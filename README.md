@@ -1,6 +1,6 @@
 # GVM: Automatic Mapping Manager
 
-This repository introduces GVM (General Value Mapping), a powerful tool designed to simplify managing mapped values across your project files. With GVM, you can effortlessly automate replacements and transformations, saving you time and effort.
+This repository introduces the GVM (General Value Mapper), a powerful tool designed to simplify managing mapped values across your project files. With GVM, you can effortlessly automate replacements and transformations, saving you time and effort.
 
 ## Installation & Usage
 Using GVM is very simple. Download the GVM Installer through the [releases page](https://github.com/MrKelpy/GVM/releases) and run it. Afterwards.:
