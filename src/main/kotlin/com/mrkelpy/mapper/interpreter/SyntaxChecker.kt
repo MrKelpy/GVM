@@ -22,7 +22,7 @@ class SyntaxHandler(private val filepath: String) {
 
     /**
      * Reads the assigned file by first removing any comments and indentation, and then separating
-     * the statements by ";"
+     * the statements by a semicolon
      *
      * @return A list with all the statements in the mappings file
      */
