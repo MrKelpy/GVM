@@ -1,0 +1,27 @@
+// 
+// This is a comment.
+//
+// Simple example for a mappings file. 
+// Every mappings file has to have an .gvm extension associated to it,
+// And you may only have one .gvm file per project.
+// 
+//
+
+out ./gvm-out/;
+
+mappings for SECTION-NAME;  // Define the section being mapped
+
+	set location (./src/);  // Define the relative locaiton of the section based on the CWD
+	set scope (*.kt, *.kts);  // Define the files to be changed
+	
+	// Define the keywords mapped to the ones that will replace them
+	set mappings (
+		"abc"   -> "gef",
+		"def"   -> "abcn",
+		"saokd" -> "ewf"
+	);
+	
+end SECTION-NAME;  // Close off the section
+
+	
+	

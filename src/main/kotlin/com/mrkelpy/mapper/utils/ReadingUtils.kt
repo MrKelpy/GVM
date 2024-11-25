@@ -24,7 +24,7 @@ class ReadingUtils {
         }
 
         /**
-         * Removes all the comments in the given file, returning a string with the full text
+         * Removes all the comments in the given file
          *
          * @return A string containing the text with no comments
          */

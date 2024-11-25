@@ -35,8 +35,8 @@ out ./gvm-out/;
 mappings for SECTION_NAME;  // Define the section being mapped
 
   // Section Properties 
-  set location PATH;  // Define the relative location of files (based on CWD)
-  set scope FILENAME_PATTERNS;  // Define file patterns to be affected
+  set location (PATH);  // Define the relative location of files (based on CWD)
+  set scope (FILENAME_PATTERNS);  // Define file patterns to be affected
 
   // Mapping Definitions 
   set mappings (
@@ -64,7 +64,7 @@ Within the `set mappings` block, define key-value pairs to specify the old value
 ```
 mappings for UI_Strings;  // Define the section for UI strings
 
-  set location ./src/resources/;  // Set the location to resources directory 
+  set location (./src/resources/);  // Set the location to resources directory 
   set scope (*.xml);  // Apply mappings to all XML files
 
   set mappings (

@@ -10,7 +10,7 @@ class Engine {
 
     // Defines the frequently needed and most important values for the interpreter
     companion object {
-        internal const val extension = ".gvm"
+        internal const val EXTENSION = "gvm"
     }
 
     /**
@@ -33,12 +33,12 @@ class Engine {
     private fun getMappingsFile(cwd: String) : String?{
 
         val files = File(cwd).listFiles()!!
-        val filecount = files.count { x -> x.extension == extension }
+        val filecount = files.count { x -> x.extension == EXTENSION }
 
-        if (filecount != 1) throw GVMException("There must be only ONE .gvm mappings file within the project in order to use GVM. Found $filecount in ${File(cwd).absolutePath}")
+        if (filecount != 1) throw GVMException("There must only be ONE .gvm mappings file within the project in order to use GVM. Found $filecount in ${File(cwd).absolutePath}")
 
         for (file in files) {
-            if (file.extension == extension) return file.absolutePath
+            if (file.extension == EXTENSION) return file.absolutePath
         }
 
         return null
