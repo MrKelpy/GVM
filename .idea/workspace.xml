@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8efbecec-563b-4c20-a54c-defbbb22035f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/common/IndexedString.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/exceptions/GVMLInvalidSectionException.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/exceptions/GVMLSyntaxError.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/interpreter/SyntaxHandler.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/interpreter/enums/Keywords.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/exceptions/GVMException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/exceptions/GVMException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/exceptions/GVMLInvalidInstructionException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/interpreter/Engine.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/interpreter/Engine.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/interpreter/SyntaxChecker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/interpreter/SyntaxChecker.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/utils/ReadingUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/utils/ReadingUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/interpreter/SyntaxHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/interpreter/SyntaxHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/interpreter/enums/Keywords.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mrkelpy/mapper/interpreter/enums/Keywords.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +23,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Data Class" />
         <option value="Class" />
-        <option value="Kotlin Class" />
         <option value="Enum" />
+        <option value="Kotlin File" />
         <option value="Kotlin Enum" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>

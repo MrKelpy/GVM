@@ -1,6 +1,5 @@
 package com.mrkelpy.mapper.interpreter
 
-import com.mrkelpy.mapper.interpreter.SyntaxChecker.Companion.checkSyntax
 import com.mrkelpy.mapper.interpreter.enums.Keywords
 import com.mrkelpy.mapper.utils.ReadingUtils.Companion.compact
 import com.mrkelpy.mapper.utils.ReadingUtils.Companion.noComments
@@ -14,24 +13,12 @@ import java.io.File
 class SyntaxHandler(private val filepath: String) {
 
     /**
-     * Runs the syntax checker on the file assigned to the class.
-     * The full syntax guide is present in the README.md file.
-     */
-    fun run() {
-        val statements = getAllStatements()
-        statements.checkSyntax()
-
-        println(getSections(statements))
-
-    }
-
-    /**
      * Reads the assigned file by first removing any comments and indentation, and then separating
      * the statements by a semicolon
      *
      * @return A list with all the statements in the mappings file
      */
-    private fun getAllStatements() : List<String> {
+    fun getAllStatements() : List<String> {
         return File(this.filepath).bufferedReader().noComments().compact().split(";")
     }
 
@@ -40,7 +27,7 @@ class SyntaxHandler(private val filepath: String) {
      * @param statements The entirety of the statements that exist
      * @return A dictionary containing the section keys mapped to their statements
      */
-    private fun getSections(statements: List<String> ) : HashMap<String, List<String>> {
+    fun getSections(statements: List<String> ) : HashMap<String, List<String>> {
 
         val result = HashMap<String, List<String>>()
 
@@ -48,6 +35,7 @@ class SyntaxHandler(private val filepath: String) {
         val sectionNames = statements.filter { x -> x.startsWith("mappingsfor") }
                                      .map { x -> x.replace("mappingsfor", "").trim() }
 
+        // Iterate over each one, adding the sublist of their contents to their hashmap
         for (section in sectionNames) {
 
             val startIndex = statements.indexOf("${Keywords.SECTION_DEFINITION}$section")

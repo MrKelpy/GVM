@@ -1,6 +1,8 @@
 package com.mrkelpy.mapper.interpreter
 
 import com.mrkelpy.mapper.exceptions.GVMException
+import com.mrkelpy.mapper.interpreter.SyntaxChecker.Companion.checkBasicSyntax
+import com.mrkelpy.mapper.interpreter.SyntaxChecker.Companion.verifyInstructionValidity
 import java.io.File
 
 /**
@@ -20,7 +22,15 @@ class Engine {
      */
     fun run(filename: String, cwd: String) : List<Array<Int>>{
 
-        val mappingsSource = this.getMappingsFile(cwd)
+        val handler = SyntaxHandler(getMappingsFile(cwd))
+
+        // Get every statement and run a syntax check
+        val statements = handler.getAllStatements()
+        statements.checkBasicSyntax()
+
+        // Get the sections and check if all the instructions defined within are registered
+        val sections = handler.getSections(statements)
+        sections.verifyInstructionValidity()
 
         return listOf()
     }
@@ -30,7 +40,7 @@ class Engine {
      * @cwd The full path to the current working directory
      * @return The full path to the mappings file, or null if not found
      */
-    private fun getMappingsFile(cwd: String) : String?{
+    private fun getMappingsFile(cwd: String) : String {
 
         val files = File(cwd).listFiles()!!
         val filecount = files.count { x -> x.extension == EXTENSION }
@@ -41,6 +51,6 @@ class Engine {
             if (file.extension == EXTENSION) return file.absolutePath
         }
 
-        return null
+        throw GVMException("Could not find a \".$EXTENSION\" file within \"$cwd\"")
     }
 }
